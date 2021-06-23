@@ -1,14 +1,8 @@
 cmake_minimum_required (VERSION 3.13)
 project (luaexpat)
 
-include_directories ("${PROJECT_SOURCE_DIR}/../../src/")
-include_directories ("${PROJECT_SOURCE_DIR}/../")
+include_directories ("${PROJECT_SOURCE_DIR}/../expat")
+include_directories ("${PROJECT_SOURCE_DIR}/../lua/src")
 
-file(GLOB SOURCE
-    "*.c"
-    "*.h"
-)
-
-add_library(luaexpat ${SOURCE})
-
+add_library(luaexpat lxplib.cpp lxplib.h)
 target_link_libraries(luaexpat expat)
