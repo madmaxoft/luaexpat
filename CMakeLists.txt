@@ -2,12 +2,12 @@ cmake_minimum_required (VERSION 3.13)
 project (luaexpat)
 
 add_library(luaexpat SHARED
-	lxplib.cpp
+	lxplib.c
 	lxplib.h
 )
 
 add_library(luaexpat-static STATIC
-	lxplib.cpp
+	lxplib.c
 	lxplib.h
 )
 
